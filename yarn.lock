@@ -7202,10 +7202,6 @@ react-faux-dom@^2.1.0, react-faux-dom@^2.3.0:
     query-selector "^1.0.9"
     style-attr "^1.0.1"
 
-react-file-download@^0.3.4:
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/react-file-download/-/react-file-download-0.3.4.tgz#4e1cfc7a47df6eeb299dfd845b99676cdedab5d2"
-
 react-motion@^0.4.8:
   version "0.4.8"
   resolved "https://registry.yarnpkg.com/react-motion/-/react-motion-0.4.8.tgz#23bb2dd27c2d8e00d229e45572d105efcf40a35e"
@@ -7884,6 +7880,7 @@ semantic-ui@^2.2.10:
     gulp-watch "^4.3.11"
     jquery "^3.2.1"
     map-stream "^0.1.0"
+    merge-stream "^1.0.0"
     mkdirp "^0.5.1"
     prompt-sui "^3.2.1"
     require-dot-file "^0.4.0"

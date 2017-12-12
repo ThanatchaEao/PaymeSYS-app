@@ -1,21 +1,10 @@
 import React, { Component } from 'react';
-import { Menu, Image } from 'semantic-ui-react';
-import styled from 'styled-components';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import logoBenefit from './logo_white.png';
-import { HeadNav, LogoPosition, SpanStyle } from './styled';
+import Logo from './logoPaymesys.png';
+import { HeadNav, MenuItem, ImageIcon, ButtonRight } from './styled';
 
-const ImageCss = styled(Image) `
-  &&&{
-  position: absolute;
-   right: 3%;
-   top: 20px;
-  }
-`;
+
 class Header extends Component {
   static propTypes = {
-    data: PropTypes.shape({}).isRequired,
   }
 
   constructor() {
@@ -23,33 +12,36 @@ class Header extends Component {
     this.state = {};
   }
 
+  ScrollWindows = Y => {
+    window.scrollTo(0, Y);
+  }
+
   render() {
-    const { data } = this.props;
-    const { companyName, logo } = data;
     return (
       <HeadNav>
-        <LogoPosition>
-          <div>
-            <Image src={logoBenefit} size="small" />
-          </div>
-        </LogoPosition>
-        <Menu.Item style={{ width: '20%' }} position="right">
-          {companyName !== ''
-            ? <div>
-              <SpanStyle>
-                {companyName}
-              </SpanStyle>
-              <ImageCss src={logo} avatar size="mini" />
-            </div>
-            : <div />}
-        </Menu.Item>
+        <ImageIcon src={Logo} />
+        <MenuItem onClick={() => this.ScrollWindows(50)}>
+          Home
+        </MenuItem>
+        <MenuItem onClick={() => this.ScrollWindows(600)}>
+          Service
+        </MenuItem>
+        <MenuItem onClick={() => this.ScrollWindows(1100)}>
+          Partner
+        </MenuItem>
+        <MenuItem >
+          Contact
+        </MenuItem>
+        <ButtonRight style={{ backgroundColor: '#FEC448' }} >
+          Sign In
+        </ButtonRight>
+        <ButtonRight>
+          Sign Up
+        </ButtonRight>
       </HeadNav>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  data: state.profile,
-});
 
-export default connect(mapStateToProps, null)(Header);
+export default Header;
