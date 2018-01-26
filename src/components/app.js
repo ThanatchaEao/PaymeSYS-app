@@ -6,6 +6,7 @@ import { BrowserRouter, Redirect } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
 import '../styles/main.scss';
 import Home from './Home';
+import Login from './Login';
 import NavLayout from './nav-layout';
 
 class App extends Component {
@@ -28,6 +29,7 @@ class App extends Component {
       <NavLayout>
         <Switch>
           <Route path="/home" component={Home} />
+          <Route path="/login" component={Login} />
           <Redirect to={{ pathname: '/home' }} />
         </Switch>
       </NavLayout>
