@@ -9,7 +9,7 @@ export const LoginBlock = styled.div`
 
 export const FormBox = styled.div`
   padding-top: 1rem;
-  height: 400px;
+  height: auto;
   width: 450px;
   display: block;
   margin: auto;

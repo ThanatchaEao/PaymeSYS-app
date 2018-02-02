@@ -7,6 +7,7 @@ import 'semantic-ui-css/semantic.min.css';
 import '../styles/main.scss';
 import Home from './Home';
 import Login from './Login';
+import AttendeeHome from './Attendee/Home'
 import NavLayout from './nav-layout';
 
 class App extends Component {
@@ -30,6 +31,7 @@ class App extends Component {
         <Switch>
           <Route path="/home" component={Home} />
           <Route path="/login" component={Login} />
+          <Route path="/attendee/home" component={AttendeeHome} />
           <Redirect to={{ pathname: '/home' }} />
         </Switch>
       </NavLayout>

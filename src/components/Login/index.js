@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { Form, Divider, Button, Icon } from 'semantic-ui-react'
 import { LoginBlock, Logo, FormBox, ButtonBox } from './styled';
 import logoPic from '../../../assets/Login/logo.png';
@@ -49,7 +50,28 @@ class Login extends Component {
     }
     return (
       <div>
-        OTP PAGE
+        <LoginBlock>
+          <Logo src={logoPic} />
+          <FormBox>
+            <Form>
+              <Form.Field>
+                <h2>example@email.com</h2>
+                <h3>Enter OTP Password</h3>
+                <input placeholder="OTP" />
+              </Form.Field>
+            </Form>
+            <ButtonBox>
+              <Link to="/attendee/home">
+                <Button animated color="orange" onClick={this.handleSetStatus} style={{ width: '150px' }}>
+                  <Button.Content visible>Login</Button.Content>
+                  <Button.Content hidden>
+                    <Icon name="lock" />
+                  </Button.Content>
+                </Button>
+              </Link>
+            </ButtonBox>
+          </FormBox>
+        </LoginBlock>
       </div>
     );
   }
