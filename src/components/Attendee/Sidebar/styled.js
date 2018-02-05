@@ -26,4 +26,3 @@ export const ElementsActive = styled.div`
   padding-top: 20px;
   font-size: 22px;
 `;
-

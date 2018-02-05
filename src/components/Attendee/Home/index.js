@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AttendeeSideBar from '../Sidebar/index'
+import { ContainBox, InfoBox } from './styled';
 
 class AttendeeHome extends Component {
   static propTypes = {
@@ -14,7 +14,11 @@ class AttendeeHome extends Component {
 
   render() {
     return (
-      <AttendeeSideBar step={0} />
+      <ContainBox>
+        <InfoBox>
+          Hello
+        </InfoBox>
+      </ContainBox>
     )
   }
 }
