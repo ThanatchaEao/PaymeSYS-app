@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Form, Divider, Button, Icon } from 'semantic-ui-react'
+import { Form, Divider, Button, Icon } from 'semantic-ui-react';
 import { LoginBlock, Logo, FormBox, ButtonBox } from './styled';
 import logoPic from '../../../assets/Login/logo.png';
 
